@@ -23,7 +23,7 @@ This website serves as a professional portfolio and online presence, highlightin
 ```
 Jake_Schwartz_Website/
 ├── index.html              # Main website file
-├── Jake-Schwartz-Resume.pdf # Downloadable resume
+├── Jake-Schwartz-Resume-Solutions-Engineer.pdf # Downloadable resume
 └── README.md              # This file
 ```
 
