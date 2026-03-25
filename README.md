@@ -1,10 +1,10 @@
 # Jake Schwartz - Personal Website
 
-A modern, minimalist personal website showcasing my professional interests and career accomplishments in business and consulting.
+A modern personal website showcasing my background in clean energy, environmental data science, and energy systems analysis.
 
 ## Overview
 
-This website serves as a professional portfolio and online presence, highlighting my expertise in strategic planning, business analysis, and consulting. The site features a clean, responsive design optimized for all devices.
+This website serves as a professional portfolio and online presence, highlighting my work across renewables, geospatial analytics, environmental science, and interdisciplinary energy research. The site features a clean, responsive design optimized for all devices.
 
 ## Features
 
@@ -13,8 +13,9 @@ This website serves as a professional portfolio and online presence, highlightin
 - **Professional Sections**:
   - Hero section with call-to-action
   - About section with core competencies
+  - Education, experience, and projects
   - Career interests showcase
-  - Contact section with resume download
+  - Contact section with GitHub, LinkedIn, email, and resume download
 - **Smooth Navigation**: Animated scrolling between sections
 - **Performance Optimized**: Fast loading with vanilla JavaScript (no frameworks)
 
@@ -23,7 +24,8 @@ This website serves as a professional portfolio and online presence, highlightin
 ```
 Jake_Schwartz_Website/
 ├── index.html              # Main website file
-├── Jake-Schwartz-Resume-Solutions-Engineer.pdf # Downloadable resume
+├── Jake-Schwartz-Resume-Energy-Analyst.pdf     # Downloadable energy resume
+├── Jake-Schwartz-Resume.pdf                    # Generic resume filename for compatibility
 └── README.md              # This file
 ```
 
