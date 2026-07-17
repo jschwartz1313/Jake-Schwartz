@@ -106,8 +106,16 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 920px;
             animation: fadeInUp 1s ease;
+        }
+
+        .hero-kicker {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
         }
 
         .hero h1 {
@@ -119,11 +127,26 @@
         }
 
         .hero h2 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            font-weight: 300;
+            font-size: 1.85rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
             color: #ffffff;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-summary {
+            max-width: 760px;
+            margin: 0 auto 2rem;
+            color: rgba(255, 255, 255, 0.94);
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.85rem;
         }
 
         .cta-button {
@@ -132,7 +155,8 @@
             background: var(--white);
             color: var(--primary-color);
             text-decoration: none;
-            border-radius: 50px;
+            border: 1px solid var(--white);
+            border-radius: 6px;
             font-weight: 600;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -141,6 +165,16 @@
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: rgba(16, 29, 42, 0.42);
+            color: var(--white);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
         }
 
         /* Section Styling */
@@ -171,9 +205,114 @@
             margin: 0.9rem auto 0;
         }
 
+        .section-intro {
+            max-width: 760px;
+            margin: -1.75rem auto 2.75rem;
+            color: var(--muted-text);
+            font-size: 1.08rem;
+            text-align: center;
+        }
+
+        /* Selected Work */
+        .selected-work {
+            background: #ffffff;
+        }
+
+        .selected-work-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+            gap: 1.5rem;
+            align-items: stretch;
+        }
+
+        .featured-work {
+            display: grid;
+            grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+            gap: 2rem;
+            align-items: center;
+            padding: 1.75rem;
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .featured-work img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 612 / 1008;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+
+        .work-meta {
+            margin-bottom: 0.6rem;
+            color: var(--accent-color);
+            font-size: 0.88rem;
+            font-weight: 700;
+        }
+
+        .featured-work h3,
+        .work-highlight h3 {
+            color: var(--primary-color);
+            line-height: 1.25;
+        }
+
+        .featured-work h3 {
+            margin-bottom: 0.85rem;
+            font-size: 1.55rem;
+        }
+
+        .featured-work p,
+        .work-highlight p {
+            color: var(--muted-text);
+        }
+
+        .text-link {
+            display: inline-block;
+            margin-top: 1.1rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .text-link:hover {
+            color: var(--primary-color);
+        }
+
+        .work-highlights {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .work-highlight {
+            padding: 1.5rem;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--accent-color);
+            border-radius: 8px;
+        }
+
+        .work-highlight h3 {
+            margin-bottom: 0.65rem;
+            font-size: 1.2rem;
+        }
+
+        .capability-line {
+            margin-top: 1rem;
+            padding-top: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--muted-text);
+            font-size: 0.92rem;
+        }
+
+        .capability-line strong {
+            color: var(--primary-color);
+        }
+
         /* About Section */
         .about {
-            background: linear-gradient(180deg, #ffffff 0%, #fbfcfc 100%);
+            background: linear-gradient(180deg, #f5f8f9 0%, #fbfcfc 100%);
         }
 
         .about-content {
@@ -197,77 +336,14 @@
         }
 
         .about-text p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.4rem;
+            color: var(--muted-text);
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--muted-text);
         }
 
-        .skills-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-
-        .skills h3 {
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .skills {
-            grid-column: 1 / -1;
-        }
-
-        .skills-list li {
-            padding: 0.75rem;
-            background: linear-gradient(180deg, #f6f9fa 0%, #edf3f6 100%);
-            border-radius: 8px;
-            font-weight: 500;
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease;
-        }
-
-        .skills-list li:hover {
-            transform: translateX(5px);
-            background: var(--accent-color);
-            color: var(--white);
-        }
-
-        /* Interests Section */
-        .interests {
-            background: linear-gradient(180deg, var(--section-tint) 0%, #f7f9fa 100%);
-        }
-
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .interest-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .interest-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px var(--shadow);
-        }
-
-        .interest-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-
-        .interest-card p {
-            color: var(--muted-text);
-            line-height: 1.6;
+        .about-text p:last-child {
+            margin-bottom: 0;
         }
 
         /* Experience Section */
@@ -276,30 +352,24 @@
         }
 
         .experience-timeline {
-            max-width: 900px;
+            max-width: 940px;
             margin: 0 auto;
         }
 
         .experience-item {
-            background: linear-gradient(180deg, #f8fafb 0%, #f2f6f8 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--accent-color);
+            padding: 1.6rem 1.75rem;
+            margin-bottom: 1.25rem;
+            background: var(--white);
             border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .experience-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px var(--shadow);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
         }
 
         .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1rem;
+            margin-bottom: 0.85rem;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
@@ -310,15 +380,15 @@
         }
 
         .experience-title h3 {
+            margin-bottom: 0.2rem;
             color: var(--primary-color);
-            font-size: 1.4rem;
-            margin-bottom: 0.25rem;
+            font-size: 1.3rem;
         }
 
         .experience-title h4 {
             color: var(--accent-color);
-            font-weight: 500;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
         }
 
         .experience-date {
@@ -327,166 +397,81 @@
             white-space: nowrap;
         }
 
-        .experience-item ul {
-            list-style: none;
-            padding-left: 0;
+        .experience-contribution {
+            color: var(--muted-text);
+            line-height: 1.7;
         }
 
-        .experience-item li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            line-height: 1.6;
+        /* Exploration Section */
+        .interests {
+            background: var(--section-tint);
         }
 
-        .experience-item li:before {
-            content: ">";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
         }
 
-        /* Mission Statement Section */
-        .mission {
-            background: linear-gradient(180deg, #ffffff 0%, #f9fbfb 100%);
-            text-align: center;
-        }
-
-        .mission-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: linear-gradient(135deg, rgba(47, 127, 179, 0.08) 0%, rgba(35, 54, 74, 0.05) 100%);
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-color);
+        .interest-card {
+            padding: 1.75rem;
+            background: var(--white);
             border: 1px solid var(--border-color);
+            border-radius: 8px;
         }
 
-        .mission-content p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-color);
-            margin-bottom: 1.5rem;
+        .interest-number {
+            display: block;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 700;
         }
 
-        .mission-content p:last-child {
-            margin-bottom: 0;
+        .interest-card h3 {
+            margin-bottom: 0.85rem;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .interest-card p {
+            color: var(--muted-text);
         }
 
         /* Education Section */
         .education {
-            background: linear-gradient(180deg, #f4f7f8 0%, #fbfcfc 100%);
+            background: #ffffff;
         }
 
-        .education-timeline {
-            max-width: 900px;
+        .education-list {
+            max-width: 940px;
             margin: 0 auto;
+            border-top: 1px solid var(--border-color);
         }
 
-        .education-item {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            border-left: 4px solid #2ecc71;
-            box-shadow: 0 4px 15px var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .education-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 6px 20px var(--shadow);
-        }
-
-        .education-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .education-title {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .education-title h3 {
-            color: var(--primary-color);
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-title h4 {
-            color: #2ecc71;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .education-subtitle {
-            color: var(--muted-text);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .education-date {
-            color: var(--muted-text);
-            font-weight: 500;
-            white-space: nowrap;
-        }
-
-        .education-details {
-            margin-top: 1rem;
-        }
-
-        .education-details p {
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
-            color: var(--muted-text);
-        }
-
-        .education-details strong {
-            color: var(--primary-color);
-        }
-
-        .coursework-list {
-            list-style: none;
-            padding-left: 0;
+        .degree-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 0.3rem 0.5rem;
-            margin-top: 0.5rem;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 2rem;
+            align-items: center;
+            padding: 1.35rem 0;
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .coursework-list li {
-            padding: 0.4rem 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-            line-height: 1.6;
+        .degree-row h3 {
+            margin-bottom: 0.2rem;
+            color: var(--primary-color);
+            font-size: 1.15rem;
+        }
+
+        .degree-row p,
+        .degree-date {
             color: var(--muted-text);
         }
 
-        .coursework-list li:before {
-            content: ">";
-            position: absolute;
-            left: 0;
-            color: #2ecc71;
-            font-weight: bold;
-        }
-
-        .honors-badge {
-            display: inline-block;
-            background: #2ecc71;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .degree-date {
             font-weight: 600;
-            margin-top: 0.5rem;
+            text-align: right;
         }
 
         /* Contact Section */
@@ -553,17 +538,52 @@
             }
 
             .hero {
-                min-height: calc(100vh - 7rem);
-                min-height: calc(100svh - 7rem);
+                min-height: calc(100vh - 8.5rem);
+                min-height: calc(100svh - 8.5rem);
                 background-attachment: scroll;
+                padding: 1.5rem 1.25rem;
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                margin-bottom: 0.65rem;
+                font-size: 2rem;
             }
 
             .hero h2 {
-                font-size: 1.2rem;
+                margin-bottom: 0.75rem;
+                font-size: 1.15rem;
+                line-height: 1.35;
+            }
+
+            .hero-kicker {
+                margin-bottom: 0.6rem;
+                font-size: 0.7rem;
+            }
+
+            .hero-summary {
+                margin-bottom: 1.25rem;
+                font-size: 0.92rem;
+                line-height: 1.5;
+            }
+
+            .hero-actions {
+                gap: 0.6rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 250px;
+                padding: 0.65rem 1rem;
+            }
+
+            .selected-work-grid,
+            .featured-work {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-work img {
+                max-width: 260px;
+                margin: 0 auto;
             }
 
             .about-content {
@@ -574,14 +594,6 @@
             .profile-photo {
                 justify-self: center;
                 max-width: 300px;
-            }
-
-            .skills {
-                grid-column: auto;
-            }
-
-            .skills-list {
-                grid-template-columns: 1fr;
             }
 
             .nav-links {
@@ -605,25 +617,17 @@
                 white-space: normal;
             }
 
-            .education-header {
-                flex-direction: column;
-            }
-
-            .education-date {
-                align-self: flex-start;
-                white-space: normal;
-            }
-
-            .coursework-list {
-                grid-template-columns: 1fr;
-            }
-
             .interests-grid {
                 grid-template-columns: 1fr;
             }
 
-            .mission-content p {
-                font-size: 1.1rem;
+            .degree-row {
+                grid-template-columns: 1fr;
+                gap: 0.35rem;
+            }
+
+            .degree-date {
+                text-align: left;
             }
         }
 
@@ -646,10 +650,10 @@
         <nav aria-label="Primary navigation">
             <a href="index.html" class="logo" aria-label="Jake Schwartz home">Jake Schwartz</a>
             <ul class="nav-links">
+                <li><a href="#work">Selected Work</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#exploring">Exploring</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -660,117 +664,76 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-kicker">Energy Systems | Geospatial Data | Applied Analytics</div>
             <h1>Jake Schwartz</h1>
-            <h2>Quantitative Energy &amp; Data Analyst</h2>
-            <a href="#contact" class="cta-button">Get In Touch</a>
+            <h2>I build analytical tools that turn complex data into practical decisions.</h2>
+            <p class="hero-summary">My work connects energy, geography, markets, and software, from renewable-energy siting and regulatory screening to geospatial applications and startup research.</p>
+            <div class="hero-actions">
+                <a href="#work" class="cta-button">View Selected Work</a>
+                <a href="Jake-Schwartz-Resume-Energy-Analyst.pdf" class="cta-button secondary" download>Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work Section -->
+    <section id="work" class="selected-work">
+        <h2>Selected Work</h2>
+        <p class="section-intro">A few examples of how I combine research, data, and software to make technical information more useful.</p>
+        <div class="selected-work-grid">
+            <article class="featured-work">
+                <a href="Cohort-17-Top-25-Finalist-Book.pdf" target="_blank" rel="noopener" aria-label="Open the Cohort 17 Top Twenty Five Finalist Selection PDF">
+                    <img src="assets/cohort-17-finalist-book-cover.jpg" alt="Cover of the Joules Accelerator Cohort Seventeen Top Twenty Five Finalist Selection book" width="485" height="800" loading="lazy">
+                </a>
+                <div>
+                    <div class="work-meta">Joules Accelerator | Research and Publication</div>
+                    <h3>Cohort 17: Top Twenty Five Finalist Selection</h3>
+                    <p>I helped research and assemble this 40-page publication profiling grid-technology startups. The work required comparing technical and commercial information, synthesizing findings, and shaping material for program stakeholders.</p>
+                    <p class="capability-line"><strong>Capabilities demonstrated:</strong> Market research, technical synthesis, startup benchmarking, collaborative publishing</p>
+                    <a class="text-link" href="portfolio.html#work-samples">View work sample</a>
+                </div>
+            </article>
+
+            <div class="work-highlights">
+                <article class="work-highlight">
+                    <div class="work-meta">COSOLVE | Current Professional Work</div>
+                    <h3>Virginia Unmanned Systems Asset Map</h3>
+                    <p>Building a standalone Django and Leaflet application for searching, filtering, and understanding organizations, facilities, and capabilities across Virginia's unmanned-systems ecosystem.</p>
+                    <p class="capability-line"><strong>Capabilities developed:</strong> Django, Leaflet, geospatial interfaces, information architecture, research translation</p>
+                </article>
+
+                <article class="work-highlight">
+                    <div class="work-meta">CGIT | Current Professional Work</div>
+                    <h3>Roadway Safety Analysis Interface</h3>
+                    <p>Developing reusable JavaScript components and data-table features for a Django and PostgreSQL application used to analyze Virginia crash and roadway-safety data.</p>
+                    <p class="capability-line"><strong>Capabilities developed:</strong> ES modules, reusable UI components, data tables, testing, GitLab workflows</p>
+                </article>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
+        <h2>How I Got Here</h2>
         <div class="about-content">
             <img class="profile-photo" src="assets/jake-schwartz-headshot.jpg" alt="Portrait of Jake Schwartz" width="749" height="1000" loading="lazy">
             <div class="about-text">
                 <p>
-                    I'm Jake Schwartz, a quantitative energy and data analyst who builds analytical tools, improves data-quality and operational workflows, and translates complex regulatory and technical requirements into actionable insights.
+                    I started in environmental science because I wanted to understand how energy and infrastructure decisions affect real places. Focusing on quantitative energy systems showed me that the hardest questions rarely belong to one discipline: they sit between technology, economics, regulation, geography, and policy.
                 </p>
                 <p>
-                    I earned a Master of Science in Information Science and a Bachelor of Science in Environmental Science from UNC Chapel Hill, where I focused on quantitative energy systems.
+                    I added a master's degree in information science to get better at organizing data, analyzing systems, and building tools people can actually use. Since then, my work has moved between renewable-energy siting, regulatory and geospatial screening, data operations, commercialization research, and application development.
                 </p>
                 <p>
-                    I combine Python, SQL, Excel, JavaScript, and geospatial analysis with experience developing web applications, supporting data operations, conducting market research, and evaluating renewable energy sites. My work spans energy, infrastructure, transportation safety, regulatory screening, and commercialization research.
+                    The common thread is translation: turning messy technical information into a clearer dataset, interface, workflow, or recommendation. I am especially drawn to energy and infrastructure problems where better analysis can improve how projects are evaluated and decisions are made.
                 </p>
-                <p>
-                    I'm especially interested in distributed energy resources, virtual power plants, and wholesale electricity markets, along with the broader clean-tech landscape. I'm drawn to energy work where data, markets, infrastructure, regulation, and policy shape real-world decisions.
-                </p>
-            </div>
-            <div class="skills">
-                <h3>Technical Skills</h3>
-                <ul class="skills-list">
-                    <li>Python, SQL &amp; R</li>
-                    <li>pandas, NumPy &amp; matplotlib</li>
-                    <li>Django</li>
-                    <li>Microsoft Excel</li>
-                    <li>JavaScript</li>
-                    <li>ArcGIS &amp; QGIS</li>
-                    <li>Time-Series Analysis</li>
-                    <li>Exploratory Data Analysis</li>
-                    <li>Regression &amp; Scenario Analysis</li>
-                    <li>Data Validation &amp; QA</li>
-                    <li>Risk &amp; Sensitivity Analysis</li>
-                    <li>NPV &amp; LCOE Calculations</li>
-                    <li>Energy Systems Analysis</li>
-                    <li>Regulatory Constraints Analysis</li>
-                    <li>GitLab &amp; Git</li>
-                    <li>VS Code</li>
-                    <li>ChatGPT &amp; Claude</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission Statement Section -->
-    <section id="mission" class="mission">
-        <h2>Mission Statement</h2>
-        <div class="mission-content">
-            <p>
-                I want to turn complex energy, geospatial, and market data into practical tools and decisions that move real projects forward.
-            </p>
-            <p>
-                My focus is quantitative analysis that connects data, geography, markets, policy, and infrastructure, especially where better systems can improve screening, operations, and investment decisions.
-            </p>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <h2>Education</h2>
-        <div class="education-timeline">
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">
-                        <h3>University of North Carolina at Chapel Hill</h3>
-                        <h4>Master of Science in Information Science</h4>
-                    </div>
-                    <div class="education-date">Graduated May 2026</div>
-                </div>
-                <div class="education-details">
-                    <p><strong>Relevant Coursework:</strong></p>
-                    <ul class="coursework-list">
-                        <li>Information Analytics</li>
-                        <li>Systems Analysis</li>
-                        <li>Risk Management and Returns</li>
-                        <li>Data Mining</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="education-item">
-                <div class="education-header">
-                    <div class="education-title">
-                        <h3>University of North Carolina at Chapel Hill</h3>
-                        <h4>Bachelor of Science in Environmental Science</h4>
-                        <div class="education-subtitle">Focused on Quantitative Energy Systems | GPA: 3.69</div>
-                    </div>
-                    <div class="education-date">Graduated May 2025, with distinction</div>
-                </div>
-                <div class="education-details">
-                    <p><strong>Relevant Coursework:</strong></p>
-                    <ul class="coursework-list">
-                        <li>Sustainable Energy Systems</li>
-                        <li>Environmental Modeling</li>
-                        <li>Decision-Making and the Environment</li>
-                    </ul>
-                    <span class="honors-badge">Dean's List: Fall 2021, Fall 2022, Fall 2023, Spring 2024, Fall 2024, Spring 2025</span>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-        <h2>Work Experience</h2>
+        <h2>Experience &amp; Growth</h2>
+        <p class="section-intro">The work I have done, the problems I contributed to, and the capabilities each role helped me develop.</p>
         <div class="experience-timeline">
             <div class="experience-item">
                 <div class="experience-header">
@@ -780,11 +743,8 @@
                     </div>
                     <div class="experience-date">June 2026 - Present</div>
                 </div>
-                <ul>
-                    <li>Conduct research and benchmarking across energy, defense, infrastructure, and economic-development initiatives to support strategy, program design, and client-ready recommendations</li>
-                    <li>Develop a standalone Django and Leaflet asset-map viewer for searching, filtering, and analyzing Virginia's unmanned-systems organizations, facilities, and capabilities</li>
-                    <li>Build and maintain the company website using HTML, CSS, JavaScript, cPanel, and SFTP-based deployment workflows</li>
-                </ul>
+                <p class="experience-contribution">I work across research and software delivery: benchmarking energy, defense, infrastructure, and economic-development initiatives; building a geospatial asset-map application; and maintaining the company's web presence. The role has strengthened my ability to turn ambiguous program questions into structured information and usable tools.</p>
+                <p class="capability-line"><strong>Capabilities developed:</strong> Django, Leaflet, JavaScript, research synthesis, information architecture, web deployment</p>
             </div>
 
             <div class="experience-item">
@@ -795,11 +755,8 @@
                     </div>
                     <div class="experience-date">June 2026 - Present</div>
                 </div>
-                <ul>
-                    <li>Develop and improve JavaScript dashboard components for a Django and PostgreSQL application used to analyze Virginia crash and roadway-safety data</li>
-                    <li>Build data-table and roadway-analysis features using ES modules, reusable components, and GitLab-based development workflows</li>
-                    <li>Translate analytical requirements into tested application functionality for state and local transportation-safety stakeholders</li>
-                </ul>
+                <p class="experience-contribution">I develop dashboard components, data tables, and roadway-analysis features for a Django and PostgreSQL application supporting transportation-safety analysis. This work is teaching me how modular front-end design, testing, and disciplined version-control practices support dependable public-sector analytical tools.</p>
+                <p class="capability-line"><strong>Capabilities developed:</strong> JavaScript ES modules, reusable components, PostgreSQL-backed applications, testing, GitLab collaboration</p>
             </div>
 
             <div class="experience-item">
@@ -810,11 +767,8 @@
                     </div>
                     <div class="experience-date">March 2026 - June 2026</div>
                 </div>
-                <ul>
-                    <li>Conduct market research and benchmarking to support refinement of Joules' startup commercialization-readiness framework</li>
-                    <li>Synthesize findings and help develop templates, reporting tools, and program materials for startups and internal stakeholders</li>
-                    <li>Leverage LLM tools to accelerate market research, synthesis, and program development while validating results</li>
-                </ul>
+                <p class="experience-contribution">I researched commercialization-readiness practices, compared market and program models, and converted findings into templates and materials for startups and internal stakeholders. I also contributed to the Cohort 17 startup search and finalist publication.</p>
+                <p class="capability-line"><strong>Capabilities developed:</strong> Market research, startup benchmarking, technical synthesis, program design, validated AI-assisted research</p>
             </div>
 
             <div class="experience-item">
@@ -825,12 +779,8 @@
                     </div>
                     <div class="experience-date">October 2025 - May 2026</div>
                 </div>
-                <ul>
-                    <li>Supported client-facing digital screening products via analysis and standardization of regulatory and geospatial datasets</li>
-                    <li>Collaborated with stakeholders to turn reporting needs into repeatable QA and documentation workflows</li>
-                    <li>Evaluated data quality gaps and process inefficiencies, recommending improvements to reliability and usability</li>
-                    <li>Used LLM tools to support research, documentation, and workflow development across regulatory and geospatial data</li>
-                </ul>
+                <p class="experience-contribution">I supported digital screening products by analyzing and standardizing regulatory and geospatial datasets, identifying quality gaps, and converting stakeholder reporting needs into repeatable QA and documentation workflows.</p>
+                <p class="capability-line"><strong>Capabilities developed:</strong> Data validation, regulatory research, geospatial data operations, process design, stakeholder requirements</p>
             </div>
 
             <div class="experience-item">
@@ -841,36 +791,58 @@
                     </div>
                     <div class="experience-date">November 2023 - August 2024</div>
                 </div>
-                <ul>
-                    <li>Supported site selection and due diligence for 10-200 MW energy projects through GIS-based and regulatory analysis</li>
-                    <li>Conducted structured reviews of state and federal regulations and summarized feasibility and risk implications</li>
-                    <li>Synthesized complex regulatory and spatial inputs into concise decision-ready summaries for internal stakeholders</li>
-                </ul>
+                <p class="experience-contribution">I supported site selection and due diligence for 10-200 MW energy projects by combining GIS-based screening with structured reviews of state and federal regulations. The experience showed me how spatial, regulatory, and development constraints converge in real project decisions.</p>
+                <p class="capability-line"><strong>Capabilities developed:</strong> GIS site suitability, renewable project development, regulatory analysis, feasibility screening, risk communication</p>
             </div>
         </div>
     </section>
 
-    <!-- Career Interests Section -->
-    <section id="interests" class="interests">
-        <h2>Career Interests &amp; Experience</h2>
+    <!-- Exploration Section -->
+    <section id="exploring" class="interests">
+        <h2>What I'm Exploring</h2>
+        <p class="section-intro">The questions I want to keep investigating as I build a career in energy, data, and infrastructure.</p>
         <div class="interests-grid">
             <div class="interest-card">
-                <h3>Clean Energy Systems</h3>
+                <span class="interest-number">01</span>
+                <h3>Distributed Energy &amp; Markets</h3>
                 <p>
-                    Interested in distributed energy resources, virtual power plants, wholesale electricity markets, and the wider clean-tech stack. I enjoy understanding how energy systems fit together technically, economically, and politically.
+                    How can distributed resources, virtual power plants, and flexible demand become dependable grid assets? I am interested in the technical and market rules that determine whether these systems can scale.
                 </p>
             </div>
             <div class="interest-card">
-                <h3>Energy Analytics &amp; Research</h3>
+                <span class="interest-number">02</span>
+                <h3>Geospatial Decision Systems</h3>
                 <p>
-                    I use Python, SQL, Excel, GIS, and structured research to build analytical tools and support energy and infrastructure decisions. My experience ranges from utility-scale solar siting and regulatory screening to market research, data QA, and geospatial application development.
+                    Infrastructure decisions are often spatial before they are financial. I want to keep building tools that make location, constraints, risk, and opportunity easier to compare and act on.
                 </p>
             </div>
             <div class="interest-card">
-                <h3>Interdisciplinary Problem Solving</h3>
+                <span class="interest-number">03</span>
+                <h3>Data Systems for Regulated Work</h3>
                 <p>
-                    I bring a broad lens shaped by energy, information science, environmental science, analytics, and economics. That breadth helps me translate requirements into useful systems and connect technical work to its market and policy context.
+                    Regulatory and technical work depends on traceable, well-documented data. I am interested in workflows that improve quality without losing the context and judgment behind the information.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="degree-row">
+                <div>
+                    <h3>Master of Science in Information Science</h3>
+                    <p>University of North Carolina at Chapel Hill</p>
+                </div>
+                <div class="degree-date">Graduated May 2026</div>
+            </div>
+            <div class="degree-row">
+                <div>
+                    <h3>Bachelor of Science in Environmental Science</h3>
+                    <p>Quantitative Energy Systems | GPA: 3.69 | With distinction</p>
+                </div>
+                <div class="degree-date">Graduated May 2025</div>
             </div>
         </div>
     </section>
