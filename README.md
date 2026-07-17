@@ -16,6 +16,7 @@ This website serves as my professional online presence, highlighting my educatio
   - Education and work experience
   - Career interests showcase
   - Contact section with GitHub, LinkedIn, email, and resume download
+- **Portfolio Page**: Separate work-samples and projects sections with downloadable artifacts
 - **Smooth Navigation**: Animated scrolling between sections
 - **Performance Optimized**: Fast loading with vanilla JavaScript (no frameworks)
 
@@ -24,6 +25,9 @@ This website serves as my professional online presence, highlighting my educatio
 ```
 Jake-Schwartz/
 ├── index.html              # Main website file
+├── portfolio.html          # Work samples and projects
+├── Cohort-17-Top-25-Finalist-Book.pdf # Featured work sample
+├── assets/                 # Portfolio preview images
 ├── Jake-Schwartz-Resume-Energy-Analyst.pdf     # Downloadable energy resume
 ├── Jake-Schwartz-Resume.pdf                    # Generic resume filename for compatibility
 └── README.md              # This file
