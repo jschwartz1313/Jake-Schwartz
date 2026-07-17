@@ -178,9 +178,22 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+            gap: 3rem;
             align-items: center;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 320px;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            object-position: center top;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 10px 28px var(--shadow);
         }
 
         .about-text p {
@@ -200,6 +213,10 @@
         .skills h3 {
             margin-bottom: 1.5rem;
             color: var(--primary-color);
+        }
+
+        .skills {
+            grid-column: 1 / -1;
         }
 
         .skills-list li {
@@ -554,6 +571,15 @@
                 gap: 2rem;
             }
 
+            .profile-photo {
+                justify-self: center;
+                max-width: 300px;
+            }
+
+            .skills {
+                grid-column: auto;
+            }
+
             .skills-list {
                 grid-template-columns: 1fr;
             }
@@ -644,6 +670,7 @@
     <section id="about" class="about">
         <h2>About Me</h2>
         <div class="about-content">
+            <img class="profile-photo" src="assets/jake-schwartz-headshot.jpg" alt="Portrait of Jake Schwartz" width="749" height="1000" loading="lazy">
             <div class="about-text">
                 <p>
                     I'm Jake Schwartz, a quantitative energy and data analyst who builds analytical tools, improves data-quality and operational workflows, and translates complex regulatory and technical requirements into actionable insights.
