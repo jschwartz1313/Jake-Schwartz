@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jake Schwartz - Clean energy analyst with experience across renewables, geospatial analytics, environmental science, and energy systems.">
-    <title>Jake Schwartz | Clean Energy, Analytics & Energy Systems</title>
+    <meta name="description" content="Jake Schwartz - Quantitative energy and data analyst building analytical tools, improving data workflows, and translating technical requirements into actionable insights.">
+    <title>Jake Schwartz | Quantitative Energy &amp; Data Analyst</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 6rem;
         }
 
         :root {
@@ -38,7 +43,7 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 14px var(--shadow);
             border-bottom: 1px solid var(--border-color);
-            position: fixed;
+            position: sticky;
             width: 100%;
             top: 0;
             z-index: 1000;
@@ -78,10 +83,14 @@
             color: var(--accent-color);
         }
 
+        a:focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 4px;
+        }
+
         /* Hero Section */
         .hero {
-            margin-top: 80px;
-            min-height: calc(100vh - 80px);
+            min-height: calc(100vh - 110px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -187,6 +196,11 @@
             gap: 1rem;
         }
 
+        .skills h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
         .skills-list li {
             padding: 0.75rem;
             background: linear-gradient(180deg, #f6f9fa 0%, #edf3f6 100%);
@@ -274,6 +288,7 @@
 
         .experience-title {
             flex: 1;
+            min-width: 0;
         }
 
         .experience-title h3 {
@@ -307,150 +322,11 @@
         }
 
         .experience-item li:before {
-            content: "▸";
+            content: ">";
             position: absolute;
             left: 0;
             color: var(--accent-color);
             font-weight: bold;
-        }
-
-        /* Projects Section */
-        .projects {
-            background: linear-gradient(180deg, #f2f6f8 0%, #f7f9fa 100%);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px var(--shadow);
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid var(--accent-color);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px var(--shadow);
-        }
-
-        .project-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
-        }
-
-        .project-meta {
-            color: var(--muted-text);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        .project-card p {
-            color: var(--muted-text);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .project-card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .project-card li {
-            padding: 0.4rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            line-height: 1.6;
-            color: var(--muted-text);
-        }
-
-        .project-card li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-            font-weight: bold;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            background: var(--white);
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .portfolio-card {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px var(--shadow);
-        }
-
-        .portfolio-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .portfolio-card p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            flex-grow: 1;
-        }
-
-        .portfolio-card .portfolio-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .portfolio-card .portfolio-link:hover {
-            color: var(--primary-color);
-        }
-
-        .portfolio-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        .portfolio-badge.github {
-            background: #24292e;
-            color: white;
-        }
-
-        .portfolio-badge.streamlit {
-            background: #ff4b4b;
-            color: white;
         }
 
         /* Mission Statement Section */
@@ -517,6 +393,7 @@
 
         .education-title {
             flex: 1;
+            min-width: 0;
         }
 
         .education-title h3 {
@@ -576,7 +453,7 @@
         }
 
         .coursework-list li:before {
-            content: "▸";
+            content: ">";
             position: absolute;
             left: 0;
             color: #2ecc71;
@@ -598,6 +475,12 @@
         .contact {
             background: linear-gradient(180deg, #ffffff 0%, #f8fafb 100%);
             text-align: center;
+        }
+
+        .contact-intro {
+            margin-bottom: 2rem;
+            color: #666;
+            font-size: 1.2rem;
         }
 
         .contact-links {
@@ -627,14 +510,6 @@
             transform: scale(1.05);
         }
 
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-        }
-
         /* Animations */
         @keyframes fadeInUp {
             from {
@@ -649,6 +524,22 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.65rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                min-height: calc(100vh - 7rem);
+                min-height: calc(100svh - 7rem);
+                background-attachment: scroll;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -667,8 +558,11 @@
             }
 
             .nav-links {
-                gap: 0.5rem;
-                font-size: 0.85rem;
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.35rem 0.8rem;
+                font-size: 0.8rem;
             }
 
             section {
@@ -681,6 +575,7 @@
 
             .experience-date {
                 align-self: flex-start;
+                white-space: normal;
             }
 
             .education-header {
@@ -689,13 +584,10 @@
 
             .education-date {
                 align-self: flex-start;
+                white-space: normal;
             }
 
             .coursework-list {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -707,30 +599,41 @@
                 font-size: 1.1rem;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <header>
-        <nav>
+        <nav aria-label="Primary navigation">
             <div class="logo">Jake Schwartz</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <!-- <li><a href="#portfolio">Portfolio</a></li> -->
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
+    <main>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Jake Schwartz</h1>
-            <h2>Clean Energy Analyst | Energy Systems | Environmental Data Science</h2>
+            <h2>Quantitative Energy &amp; Data Analyst</h2>
             <a href="#contact" class="cta-button">Get In Touch</a>
         </div>
     </section>
@@ -741,37 +644,38 @@
         <div class="about-content">
             <div class="about-text">
                 <p>
-                    I'm Jake Schwartz, a recent UNC Chapel Hill graduate building a career at the intersection of clean energy, data, and environmental decision-making.
+                    I'm Jake Schwartz, a quantitative energy and data analyst who builds analytical tools, improves data-quality and operational workflows, and translates complex regulatory and technical requirements into actionable insights.
                 </p>
                 <p>
-                    I studied Environmental Science as an undergraduate with a focus on quantitative energy systems, then completed an accelerated Master of Science in Information Science by beginning graduate coursework during undergrad.
+                    I earned a Master of Science in Information Science and a Bachelor of Science in Environmental Science from UNC Chapel Hill, where I focused on quantitative energy systems.
                 </p>
                 <p>
-                    I combine technical skills in GIS, Python, SQL, and analytics with hands-on experience in renewable energy siting, geospatial operations, environmental research, and energy systems analysis. My work spans utility-scale solar development, regulatory and geospatial screening, environmental data operations, greenhouse gas analysis, and applied research.
+                    I combine Python, SQL, Excel, JavaScript, and geospatial analysis with experience developing web applications, supporting data operations, conducting market research, and evaluating renewable energy sites. My work spans energy, infrastructure, transportation safety, regulatory screening, and commercialization research.
                 </p>
                 <p>
-                    I'm interested in the full clean-tech landscape: solar, wind, virtual power plants, distributed energy resources, microgrids, battery storage, advanced geothermal, nuclear, and transmission modernization. I'm drawn to the interdisciplinary nature of energy, where finance, economics, infrastructure, regulation, and policy all shape outcomes.
+                    I'm especially interested in distributed energy resources, virtual power plants, and wholesale electricity markets, along with the broader clean-tech landscape. I'm drawn to energy work where data, markets, infrastructure, regulation, and policy shape real-world decisions.
                 </p>
             </div>
             <div class="skills">
-                <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Technical Skills</h3>
+                <h3>Technical Skills</h3>
                 <ul class="skills-list">
-                    <li>Python, R, SQL</li>
-                    <li>pandas & NumPy</li>
-                    <li>Excel</li>
-                    <li>ArcGIS & QGIS</li>
-                    <li>Tableau</li>
+                    <li>Python, SQL &amp; R</li>
+                    <li>pandas, NumPy &amp; matplotlib</li>
+                    <li>Django</li>
+                    <li>Microsoft Excel</li>
+                    <li>JavaScript</li>
+                    <li>ArcGIS &amp; QGIS</li>
                     <li>Time-Series Analysis</li>
                     <li>Exploratory Data Analysis</li>
-                    <li>Regression & Scenario Analysis</li>
-                    <li>Data Validation & QA</li>
-                    <li>Risk & Sensitivity Analysis</li>
-                    <li>NPV & LCOE Calculations</li>
-                    <li>Techno-Economic Modeling</li>
+                    <li>Regression &amp; Scenario Analysis</li>
+                    <li>Data Validation &amp; QA</li>
+                    <li>Risk &amp; Sensitivity Analysis</li>
+                    <li>NPV &amp; LCOE Calculations</li>
                     <li>Energy Systems Analysis</li>
                     <li>Regulatory Constraints Analysis</li>
-                    <li>Renewable Energy Siting</li>
-                    <li>Analytical Memos & Documentation</li>
+                    <li>GitLab &amp; Git</li>
+                    <li>VS Code</li>
+                    <li>ChatGPT &amp; Claude</li>
                 </ul>
             </div>
         </div>
@@ -782,10 +686,10 @@
         <h2>Mission Statement</h2>
         <div class="mission-content">
             <p>
-                I want to help turn complex energy and environmental data into decisions that move real projects forward.
+                I want to turn complex energy, geospatial, and market data into practical tools and decisions that move real projects forward.
             </p>
             <p>
-                My focus is clean energy analysis that connects data, geography, economics, policy, and infrastructure, especially where better analysis can improve siting, screening, and investment decisions.
+                My focus is quantitative analysis that connects data, geography, markets, policy, and infrastructure, especially where better systems can improve screening, operations, and investment decisions.
             </p>
         </div>
     </section>
@@ -803,7 +707,6 @@
                     <div class="education-date">May 2026</div>
                 </div>
                 <div class="education-details">
-                    <p>Completed through an accelerated pathway after beginning MSIS coursework during undergrad.</p>
                     <p><strong>Relevant Coursework:</strong></p>
                     <ul class="coursework-list">
                         <li>Information Analytics</li>
@@ -826,10 +729,9 @@
                 <div class="education-details">
                     <p><strong>Relevant Coursework:</strong></p>
                     <ul class="coursework-list">
+                        <li>Sustainable Energy Systems</li>
                         <li>Environmental Modeling</li>
-                        <li>Database Concepts and Applications</li>
-                        <li>Intermediate Microeconomics</li>
-                        <li>Systems Analysis</li>
+                        <li>Decision-Making and the Environment</li>
                     </ul>
                     <span class="honors-badge">Dean's List: Fall 2021, Fall 2022, Fall 2023, Spring 2024, Fall 2024, Spring 2025</span>
                 </div>
@@ -844,16 +746,45 @@
             <div class="experience-item">
                 <div class="experience-header">
                     <div class="experience-title">
+                        <h3>Data Analyst Intern</h3>
+                        <h4>COSOLVE LLC</h4>
+                    </div>
+                    <div class="experience-date">June 2026 - Present</div>
+                </div>
+                <ul>
+                    <li>Conduct research and benchmarking across energy, defense, infrastructure, and economic-development initiatives to support strategy, program design, and client-ready recommendations</li>
+                    <li>Develop a standalone Django and Leaflet asset-map viewer for searching, filtering, and analyzing Virginia's unmanned-systems organizations, facilities, and capabilities</li>
+                    <li>Build and maintain the company website using HTML, CSS, JavaScript, cPanel, and SFTP-based deployment workflows</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Geospatial Application Developer</h3>
+                        <h4>Center for Geospatial Information Technology</h4>
+                    </div>
+                    <div class="experience-date">June 2026 - Present</div>
+                </div>
+                <ul>
+                    <li>Develop and improve JavaScript dashboard components for a Django and PostgreSQL application used to analyze Virginia crash and roadway-safety data</li>
+                    <li>Build data-table and roadway-analysis features using ES modules, reusable components, and GitLab-based development workflows</li>
+                    <li>Translate analytical requirements into tested application functionality for state and local transportation-safety stakeholders</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
                         <h3>ARL to Scale Research Associate Intern</h3>
                         <h4>Joules Accelerator</h4>
                     </div>
-                    <div class="experience-date">March 2026 - Present</div>
+                    <div class="experience-date">March 2026 - June 2026</div>
                 </div>
                 <ul>
-                    <li>Support the refinement of the ARL to Scale process, ensuring clarity, usability, and alignment with commercialization best practices</li>
-                    <li>Facilitate startup engagement sessions and document insights, challenges, and outcomes to inform program improvements</li>
-                    <li>Research industry benchmarks, case studies, and best practices to strengthen module content</li>
-                    <li>Assist with the design and deployment of deliverable templates, checklists, and reporting tools for cohort participants</li>
+                    <li>Conduct market research and benchmarking to support refinement of Joules' startup commercialization-readiness framework</li>
+                    <li>Synthesize findings and help develop templates, reporting tools, and program materials for startups and internal stakeholders</li>
+                    <li>Leverage LLM tools to accelerate market research, synthesis, and program development while validating results</li>
                 </ul>
             </div>
 
@@ -867,9 +798,9 @@
                 </div>
                 <ul>
                     <li>Supported client-facing digital screening products via analysis and standardization of regulatory and geospatial datasets</li>
-                    <li>Collaborated with internal stakeholders to clarify analytical and reporting requirements and translate them into repeatable intake, QA, and documentation workflows</li>
+                    <li>Collaborated with stakeholders to turn reporting needs into repeatable QA and documentation workflows</li>
                     <li>Evaluated data quality gaps and process inefficiencies, recommending improvements to reliability and usability</li>
-                    <li>Produced structured documentation to support consistent use of datasets across teams</li>
+                    <li>Used LLM tools to support research, documentation, and workflow development across regulatory and geospatial data</li>
                 </ul>
             </div>
 
@@ -885,76 +816,31 @@
                     <li>Supported site selection and due diligence for 10-200 MW energy projects through GIS-based and regulatory analysis</li>
                     <li>Conducted structured reviews of state and federal regulations and summarized feasibility and risk implications</li>
                     <li>Synthesized complex regulatory and spatial inputs into concise decision-ready summaries for internal stakeholders</li>
-                    <li>Used GIS analysis to identify viable land for solar and battery projects and began outreach by sending letters to potential landowners</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div class="experience-title">
-                        <h3>Electric Bike Research Intern</h3>
-                        <h4>Environmental Defense Fund</h4>
-                    </div>
-                    <div class="experience-date">June 2023 - August 2023</div>
-                </div>
-                <ul>
-                    <li>Analyzed transportation and emissions data to evaluate policy-relevant impacts of increased e-bike adoption</li>
-                    <li>Authored and presented a technical report summarizing findings and recommendations for GHG-reduction strategies</li>
                 </ul>
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-    </section>
-
-    <!-- Portfolio Section (hidden until further development)
-    <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <span class="portfolio-badge github">GitHub</span>
-                <h3>Project Title</h3>
-                <p>Brief description of what this project does and the technologies used.</p>
-                <a href="https://github.com/jschwartz1313/repo-name" target="_blank" class="portfolio-link">
-                    View on GitHub →
-                </a>
-            </div>
-
-            <div class="portfolio-card">
-                <span class="portfolio-badge streamlit">Streamlit</span>
-                <h3>Geospatial QA Pipeline</h3>
-                <p>An interactive pipeline for quality assurance of geospatial data.</p>
-                <a href="https://geospatial-app-pipeline-v2pcx6jdaau55kmjmrwnh7.streamlit.app/" target="_blank" class="portfolio-link">
-                    View Live App →
-                </a>
-            </div>
-        </div>
-    </section>
-    -->
 
     <!-- Career Interests Section -->
     <section id="interests" class="interests">
-        <h2>Career Interests & Experience</h2>
+        <h2>Career Interests &amp; Experience</h2>
         <div class="interests-grid">
             <div class="interest-card">
                 <h3>Clean Energy Systems</h3>
                 <p>
-                    Interested in the full clean-tech stack, from solar and wind to VPPs, DER, microgrids, battery storage, advanced geothermal, nuclear, and transmission upgrades. I enjoy understanding how these systems fit together technically, economically, and politically.
+                    Interested in distributed energy resources, virtual power plants, wholesale electricity markets, and the wider clean-tech stack. I enjoy understanding how energy systems fit together technically, economically, and politically.
                 </p>
             </div>
             <div class="interest-card">
-                <h3>Energy Analytics & Research</h3>
+                <h3>Energy Analytics &amp; Research</h3>
                 <p>
-                    I use GIS, Python, SQL, and structured research to support energy and environmental decision-making. My experience ranges from utility-scale solar siting and environmental screening to large geospatial datasets, hazard mapping, and applied energy systems research.
+                    I use Python, SQL, Excel, GIS, and structured research to build analytical tools and support energy and infrastructure decisions. My experience ranges from utility-scale solar siting and regulatory screening to market research, data QA, and geospatial application development.
                 </p>
             </div>
             <div class="interest-card">
                 <h3>Interdisciplinary Problem Solving</h3>
                 <p>
-                    I bring a broad lens shaped by energy, finance, environmental science, analytics, politics, and economics. That breadth helps me learn quickly, adapt across roles, and connect technical work to the real-world market and policy context around clean energy.
+                    I bring a broad lens shaped by energy, information science, environmental science, analytics, and economics. That breadth helps me translate requirements into useful systems and connect technical work to its market and policy context.
                 </p>
             </div>
         </div>
@@ -963,44 +849,31 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Let's Connect</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">
-            I'm always interested in discussing opportunities across clean energy, energy analytics, environmental data science, and the broader energy transition.
+        <p class="contact-intro">
+            I'm interested in opportunities across quantitative energy analysis, energy markets, geospatial application development, and the broader energy transition.
         </p>
         <div class="contact-links">
             <a href="mailto:jschwartz2521@gmail.com" class="contact-link">
-                <span>📧</span>
+                <span aria-hidden="true">📧</span>
                 <span>Email</span>
             </a>
             <a href="https://www.linkedin.com/in/jake-schwartz18" class="contact-link" target="_blank" rel="noopener">
-                <span>💼</span>
+                <span aria-hidden="true">💼</span>
                 <span>LinkedIn</span>
             </a>
             <a href="https://github.com/jschwartz1313" class="contact-link" target="_blank" rel="noopener">
-                <span>💻</span>
+                <span aria-hidden="true">💻</span>
                 <span>GitHub</span>
             </a>
             <a href="Jake-Schwartz-Resume-Energy-Analyst.pdf" class="contact-link" download>
-                <span>📄</span>
+                <span aria-hidden="true">📄</span>
                 <span>Resume</span>
             </a>
         </div>
     </section>
+    </main>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
         // Header shadow on scroll
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');

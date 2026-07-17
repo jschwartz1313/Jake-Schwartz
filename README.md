@@ -1,10 +1,10 @@
 # Jake Schwartz - Personal Website
 
-A modern personal website showcasing my background in clean energy, environmental data science, and energy systems analysis.
+A responsive personal website showcasing my background in quantitative energy analysis, geospatial application development, and data systems.
 
 ## Overview
 
-This website serves as a professional portfolio and online presence, highlighting my work across renewables, geospatial analytics, environmental science, and interdisciplinary energy research. The site features a clean, responsive design optimized for all devices.
+This website serves as my professional online presence, highlighting my education, technical skills, work experience, and interests across energy, geospatial analytics, and software development.
 
 ## Features
 
@@ -13,7 +13,7 @@ This website serves as a professional portfolio and online presence, highlightin
 - **Professional Sections**:
   - Hero section with call-to-action
   - About section with core competencies
-  - Education, experience, and projects
+  - Education and work experience
   - Career interests showcase
   - Contact section with GitHub, LinkedIn, email, and resume download
 - **Smooth Navigation**: Animated scrolling between sections
@@ -22,7 +22,7 @@ This website serves as a professional portfolio and online presence, highlightin
 ## Structure
 
 ```
-Jake_Schwartz_Website/
+Jake-Schwartz/
 ├── index.html              # Main website file
 ├── Jake-Schwartz-Resume-Energy-Analyst.pdf     # Downloadable energy resume
 ├── Jake-Schwartz-Resume.pdf                    # Generic resume filename for compatibility
@@ -35,8 +35,8 @@ Jake_Schwartz_Website/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Jake_Schwartz_Website.git
-   cd Jake_Schwartz_Website
+   git clone https://github.com/jschwartz1313/Jake-Schwartz.git
+   cd Jake-Schwartz
    ```
 
 2. Open `index.html` in your browser:
@@ -57,11 +57,7 @@ This site can be easily deployed using:
 - **GitHub Pages**:
   1. Go to repository Settings > Pages
   2. Select main branch as source
-  3. Your site will be live at `https://yourusername.github.io/Jake_Schwartz_Website/`
-
-- **Netlify**: Drag and drop the folder to Netlify for instant deployment
-
-- **Vercel**: Connect your GitHub repository for automatic deployments
+  3. The site will be live at `https://jschwartz1313.github.io/Jake-Schwartz/`
 
 ## Customization
 
@@ -107,4 +103,4 @@ For inquiries or opportunities, please reach out through the contact section on 
 
 ---
 
-**Built with** dedication to clean code and modern web design principles.
+Built with HTML, CSS, and JavaScript.
